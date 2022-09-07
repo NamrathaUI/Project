@@ -1,0 +1,11 @@
+package module;
+
+public class Delete {
+	public static void main (String args[]) {
+		StringBuilder str=new StringBuilder("robosoft");
+		str.deleteCharAt(5);
+		str.deleteCharAt(3);
+		System.out.println(str);
+
+}
+	}

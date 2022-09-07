@@ -1,0 +1,64 @@
+package module;
+
+import java.util.*;
+
+public class Member {
+	String name;
+	int age;
+	int number;
+	double salary;
+
+	public void Member(String name, int age, int number, double salary) {
+		this.name = name;
+		this.age = age;
+		this.number = number;
+		this.salary = salary;
+	}
+
+	public void print_salary() {
+		System.out.println("salaryof employee" + salary);
+	}
+}
+
+class Employee extends Member {
+	String specialization;
+
+	public void employee(String name, int age, int number, double salary, String specialization) {
+
+		this.name = name;
+		this.age = age;
+		this.number = number;
+		this.salary = salary;
+		this.specialization = specialization;
+
+	}
+}
+
+class Manager extends Member {
+	String department;
+
+	public void Manager(String name, int age, int number, double salary, String department) {
+		this.name = name;
+		this.age = age;
+		this.number = number;
+		this.salary = salary;
+		this.department = department;
+	}
+
+	void printDepartment() {
+		System.out.println("Department" + department);
+		{
+		}
+	}
+
+	public class Organization {
+		public static void main(String args[]) {
+			Employee obj1 = new Employee();
+			Manager obj2 = new Manager();
+			obj1.employee("Namrtha", 22, 9867543, 22000, "java");
+			obj2.Manager("Namratha", 22, 9807943, 25000, "python");
+			obj1.print_salary();
+			obj2.printDepartment();
+		}
+	}
+}

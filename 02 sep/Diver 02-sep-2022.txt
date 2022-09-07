@@ -1,0 +1,17 @@
+package p1;
+import java.util.*;
+import project.MinimumArrayValue ;
+public class Driver {
+	public static void main(String[] args) {
+		MinimumArrayValue obj =new MinimumArrayValue ();
+		Scanner sc=new Scanner(System.in);
+		int [] arr=new int [9];
+System.out.println("enter the array:");
+for(int i=0;i<arr.length;i++) {
+	arr[i]=sc.nextInt();
+}
+obj.minArray(arr);
+obj.multiplyArray(arr);
+	
+}
+	}

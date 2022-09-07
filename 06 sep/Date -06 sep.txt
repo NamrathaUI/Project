@@ -1,0 +1,19 @@
+package lambda;
+
+import java.time.*;
+
+class Date {
+	public static void main(String args[]) {
+
+		LocalDate dt = LocalDate.now();
+
+		int dd = dt.getDayOfMonth();
+		int mm = dt.getMonthValue();
+		int yyyy = dt.getYear();
+		
+		System.out.printf("\n%d/%d/%d", dd, mm, yyyy);
+		 
+		
+	}
+	}
+

@@ -1,0 +1,37 @@
+package module;
+
+import java.util.Scanner;
+
+	class AddException extends Exception {
+		AddException() {
+			// system.out.println(s);
+		}
+	}
+
+	public class Exceptioncase {
+		public static void main(String args[]) {
+			Scanner sc = new Scanner(System.in);
+			int number1;
+			int number2;
+			int result;
+			System.out.println("enter first number");
+			number1 = sc.nextInt();
+			System.out.println("enter second number");
+			number2 = sc.nextInt();
+			result = number1 + number2;
+
+			if (result < 100)
+
+			{
+				System.out.println("the sum is less than 100");
+				System.out.println("the result is:" + result);
+
+			} else
+				try {
+					throw new AddException();
+				} catch (AddException a) {
+
+					System.out.println("exception caught in catch block");
+				}
+		}
+	}

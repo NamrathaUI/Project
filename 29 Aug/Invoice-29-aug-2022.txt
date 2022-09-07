@@ -1,0 +1,71 @@
+package module;
+
+import java.util.*;
+
+class Hardware {
+	private String partNumber;
+	private String partDescription;
+	private int Quantity;
+	private double pricePerItem;
+
+	public Hardware(String partNumber, String partDescription, int Quantity, double pricePerItem) {
+		partNumber = "None";
+		partDescription = "None";
+		Quantity = 0;
+		pricePerItem = 0.0;
+
+	}
+
+	String getpartNumber() {
+		return this.partNumber = partNumber;
+	}
+
+	String getpartDescription() {
+		return this.partDescription = partDescription;
+	}
+
+	int getQuantity() {
+		return this.Quantity = Quantity;
+
+	}
+
+	double getpricePreItem() {
+		return pricePerItem;
+	}
+
+	void setpartNumber(String partNumber) {
+		this.partNumber = partNumber;
+	}
+
+	public void setpartDescription(String partDescription) {
+		this.partDescription = partDescription;
+	}
+
+	public void setQuantity(int Quantity) {
+		this.Quantity = Quantity;
+	}
+
+	public void setpricePreItem(double pricePreItem) {
+		this.pricePerItem = pricePerItem;
+	}
+
+	double getInvoiceAmount() {
+		double amount = Quantity * pricePerItem;
+		return amount;
+	}
+}
+	public class Invoice {
+		public static void main(String args[]) {
+			Hardware a = new Hardware("GOAT76", "Headphone", 1, 500);
+			a.setpartNumber("290b");
+			a.setpartDescription("mobile");
+			a.setQuantity(3);
+			a.setpricePreItem(20000);
+			System.out.println("number of the product" + a.getpartNumber());
+			System.out.println("number of the product" + a.getpartDescription());
+			System.out.println("number of the product" + a.getQuantity());
+			System.out.println("number of the product" + a.getpricePreItem());
+			System.out.println("number of the product" + a.getInvoiceAmount());
+		}
+	}
+

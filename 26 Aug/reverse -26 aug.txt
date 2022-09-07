@@ -1,0 +1,15 @@
+package module;
+
+import java.util.*;
+
+public class Reverse {
+	private static int len;
+
+	public static void main(String args[]) {
+		StringBuilder str = new StringBuilder("robosoft");
+		str.reverse();
+		System.out.println(str);
+
+	}
+
+}

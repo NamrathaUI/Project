@@ -1,0 +1,13 @@
+package lambda;
+
+import java.time.LocalDate;
+
+public class ParticularDate {
+	public static void main (String args[]) {
+		 LocalDate Birthday=LocalDate.now();
+		
+		 LocalDate BirthDay=LocalDate.of(2000,05,18);
+		 System.out.println(" BirthDay:"+BirthDay);
+	}
+
+}

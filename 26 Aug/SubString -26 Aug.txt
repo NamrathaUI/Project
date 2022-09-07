@@ -1,0 +1,12 @@
+package module;
+
+import java.util.*;
+
+public class Substring {
+	public static void main(String srgs[]) {
+		Scanner sc = new Scanner(System.in);
+		String s = "robosoft technologies";
+		String name = s.substring(8, s.length());
+		System.out.println(name);
+	}
+}

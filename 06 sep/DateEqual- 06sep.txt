@@ -1,0 +1,19 @@
+package lambda;
+
+import java.time.*;
+
+public class DateEqual {
+	public static void main(String args[]) {
+		LocalDate date = LocalDate.now();
+		System.out.println("todays date:" + date);
+		LocalDate d = LocalDate.of(2022, 03, 9);
+		System.out.println("Birthday date :" + d);
+		System.out.println("Dates are equal?" + (d.compareTo(date) == 0));
+		LocalDate dt = LocalDate.now();
+		System.out.println("\ntodays date:" + dt);
+		LocalDate dt1 = LocalDate.of(2022, 9, 6);
+		System.out.println("Birthday date :" + dt1);
+		System.out.println("Dates are equal?" + (dt1.compareTo(dt) == 0));
+
+	}
+}

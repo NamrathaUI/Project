@@ -1,0 +1,42 @@
+package module;
+import java.util.*;
+class Add  extends Exception{
+	Add(){
+		
+	}
+
+}
+public class Marks{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int internalmarks;
+		int externalmarks;
+		System.out.println("enter the internal marks");
+		internalmarks=sc.nextInt();
+	
+	if (internalmarks >40) {
+		try
+		{
+			throw new Add();
+		}
+	
+	catch(Add a) {
+		System.out.println("internal marks is exceeded");
+	}
+		}
+	System.out.println("enter the external marks");
+	externalmarks=sc.nextInt();
+
+if (externalmarks >60) {
+	try
+	{
+		throw new Add();
+	}
+
+catch(Add a) {
+	System.out.println("external marks is exceeded");
+}
+	
+}	
+	}
+}

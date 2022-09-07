@@ -1,0 +1,14 @@
+package lambda;
+
+import java.time.*;
+
+public class CurrentDay {
+	public static void main(String args[]) {
+		LocalDate d = LocalDate.now();
+
+		System.out.println("current day:" + d.getDayOfMonth());
+		System.out.println("current day:" + d.getDayOfWeek());
+		System.out.println("current day:" + d.getYear());
+
+	}
+}

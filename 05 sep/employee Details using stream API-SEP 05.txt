@@ -1,0 +1,38 @@
+package lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+class Employee {
+	String Name;
+	int Id;
+	double salary;
+
+	Employee(String Name, int Id, double salary) {
+
+		this.Name = Name;
+		this.Id = Id;
+		this.salary = salary;
+	}
+}
+
+public class EmployeeDetails {
+	public static void main(String[] args) {
+
+		List<Employee> List = new ArrayList<Employee>();
+		List.add(new Employee("Namrata naik", 29, 17000));
+		List.add(new Employee("Varshini", 12, 500));
+		List.add(new Employee("Ambika", 14, 34000));
+
+		List.stream().filter(s -> s.salary > 15000)
+				.forEach(n -> System.out.println(n.Name + " " + n.Id + " " + n.salary));
+		Employee employeeB = List.stream().max((s1, s2) -> s1.salary > s2.salary ? 1 : -1).get();
+		System.out.println("maximum salary:" + employeeB.salary);
+		long total = List.stream().count();
+		System.out.println("total number of Employees:" + total);
+		List.stream().filter(Name -> Name.Name.length() > 4).forEach(n -> System.out.println(n.Name));
+		System.out.println("sorted name");
+		List.stream().sorted((n1, n2) -> n1.Name.compareTo(n2.Name)).forEach(n -> System.out.println(n.Name));
+	}
+}

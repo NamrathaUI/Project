@@ -1,0 +1,28 @@
+package lambda;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+public class EmployeeName {
+
+	public static void main(String[] args) {
+		List<String> memberNames = new ArrayList<>();
+		memberNames.add("Ambika");
+		memberNames.add("Bhagya");
+		memberNames.add("Namratha");
+		memberNames.add("Vaishnavi");
+		memberNames.add("Namitha");
+		memberNames.add("Pallavi");
+		memberNames.add("Varshini");
+		memberNames.add("Divya");
+		memberNames.add("Varidi");
+		memberNames.add("Raksha");
+		memberNames.add("Latha");
+		Stream<String> str = memberNames.stream();
+		memberNames.forEach((i) -> System.out.println(i));
+		System.out.println("Filtering  operation");
+		memberNames.stream().filter((i) -> i.startsWith("V"))
+				.forEach(str1 -> System.out.println(str1));
+
+	}
+}
+

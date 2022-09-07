@@ -1,0 +1,13 @@
+package lambda;
+
+import java.time.*;
+
+public class DateOne {
+	public static void main(String args[]) {
+		LocalDate d = LocalDate.of(1990,7,8);
+		System.out.println(d);
+		System.out.println("After one year:" + d.plusMonths(12));
+		System.out.println("before one year:" + d.minusMonths(12));
+	}
+
+}

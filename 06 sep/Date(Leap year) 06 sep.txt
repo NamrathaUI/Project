@@ -1,0 +1,22 @@
+package lambda;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class LeapYear {
+	public static void main (String args[]) {
+		LocalDate date=LocalDate.of(2020,2,29);
+		Scanner scan=new Scanner(System.in);
+		int year=scan.nextInt();
+		LocalDate date2=date.withYear(year);
+		boolean isLeap=date2.isLeapYear();
+		if(isLeap) {
+			System.out.println(date2.getYear()+"is a leap year.");
+		}
+		else{
+				System.out.println(date2.getYear()+"is not  a leap year.");
+			}
+		}
+		
+	}
+

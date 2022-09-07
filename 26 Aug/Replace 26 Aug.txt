@@ -1,0 +1,10 @@
+package module;
+
+public class Replace {
+	public static void main (String args[]) {
+		StringBuilder str1=new StringBuilder("robosoft pvt");
+	    str1.replace(9,10,"lmt");
+		System.out.println(str1);
+	}
+
+}
